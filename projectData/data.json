@@ -1,0 +1,73 @@
+[
+  {
+    "title": "match-mate",
+    "description": "협업 프로젝트",
+    "date": "2022-06-25",
+    "banner": "",
+    "path": "match-mate",
+    "thumbnail": "winterfoodiesThumbnail.png",
+    "tags": [
+      { "id": 1, "subtitle": "기여도 100%" },
+      { "id": 2, "subtitle": "2024년 05월 - 진행중" },
+      { "id": 3, "subtitle": "반응형" }
+    ]
+  },
+  {
+    "title": "Winter foodies Project 마이그레이션",
+    "description": "협업 프로젝트 -> 마이그레이션 : 개인 프로젝트",
+    "date": "2022-06-15",
+    "banner": "",
+    "path": "winter-foodies",
+    "thumbnail": "winterfoodiesThumbnail.png",
+    "tags": [
+      { "id": 1, "subtitle": "기여도 100%" },
+      { "id": 2, "subtitle": "2024년 03월 - 07월" },
+      { "id": 3, "subtitle": "마이그레이션 기간 : 2024년 6월 한달" },
+      { "id": 4, "subtitle": "반응형" }
+    ]
+  },
+  {
+    "title": "Hobbyloop Project",
+    "description": "실서비스 협업 프로젝트",
+    "date": "2024년 03월 - 진행중",
+    "path": "hobbyloop",
+    "thumbnail": "hobbyloopThumbnail.png",
+    "banner": "hobbyloop_banner.svg",
+    "tags": [
+      { "id": 1, "subtitle": "기여도 40+%" },
+      { "id": 2, "subtitle": "2024년 03월 - 진행중" },
+      { "id": 3, "subtitle": "반응형" }
+    ],
+    "icon": "../../../public/img/fileIcon.svg",
+    "logo": "hobbyloop_logo.svg",
+    "projectintro": [
+      {
+        "introText": "소개",
+        "intro": "결제와 수업예약을 한번에 할 수 있는 실서비스 웹어플리케이션"
+      },
+      { "introText": "작업 기간", "intro": "2024년 03월 - 진행중" },
+      {
+        "introText": "적용 기술",
+        "intro": "React, Typescript, Nextjs,TailwindCss, styped-components, AWS, S3,cloudfront"
+      },
+      {
+        "introText": "팀 구성",
+        "intro": "Fe 4명,Be 5명,IOS 4명 ,디자이너 3명"
+      },
+      { "introText": "기여도", "intro": "45%" }
+    ]
+  },
+  {
+    "title": "Blog Project",
+    "description": "개인 프로젝트",
+    "date": "2024년 12월 -",
+    "banner": "",
+    "path": "blog",
+    "thumbnail": "blogThumbnail.png",
+    "tags": [
+      { "id": 1, "subtitle": "기여도 100%" },
+      { "id": 2, "subtitle": "2024년 03월 - 진행중" },
+      { "id": 3, "subtitle": "반응형" }
+    ]
+  }
+]

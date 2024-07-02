@@ -1,8 +1,37 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
+import localFont from "next/font/local";
 
-const inter = Inter({ subsets: ["latin"] });
+const free = localFont({
+  src: [
+    {
+      path: "../../public/font/Freesentation-4Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/font/Freesentation-5Medium.ttf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../../public/font/Freesentation-6SemiBold.ttf",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../../public/font/Freesentation-7Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../../public/font/Freesentation-8ExtraBold.ttf",
+      weight: "800",
+      style: "normal",
+    },
+  ],
+  variable: "--font-free",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,8 +44,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className={free.className}>
+      <body className="relative mx-auto flex w-full flex-col">
+        <main className="relative grow">{children}</main>
+        <footer className="h-[100px] bg-[#efefef] mt-[30px] flex flex-col items-center justify-center">
+          <p className="text-sm">
+            &copy; {new Date().getFullYear()} chosule. All rights reserved.
+          </p>
+          <p className="text-sm">Designed & Developed by chosule</p>
+        </footer>
+      </body>
     </html>
   );
 }

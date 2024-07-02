@@ -1,0 +1,51 @@
+```js
+const serviceAccount = require("./serviceAccountKey.json");
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  storageBucket: "winter-foodis-new.appspot.com",
+});
+
+projectApp.post("/review", async (req, res) => {
+  try {
+    const { userId, storeName, rating, reviewText } = req.body;
+    const file = req.files[0];
+
+    const imageBuffer = file.buffer;
+    const imageName = `${uuidv4()}_${file.originalname}`;
+    const fileStorage = bucket.file(imageName);
+
+    await fileStorage.save(imageBuffer, { contentType: file.mimetype });
+
+    const [imageUrl] = await fileStorage.getSignedUrl({
+      action: "read",
+      expires: "03-01-2500",
+    });
+
+    const reviewData = {
+      userId,
+      storeName,
+      rating: parseInt(rating, 10),
+      reviewText,
+      imageUrl,
+      createdAt: admin.firestore.FieldValue.serverTimestamp(),
+    };
+
+    await db.collection(reviewCollection).add(reviewData);
+    res.status(200).send({ result: "Review successfully added" });
+  } catch (error) {
+    res.status(500).send({ error: "Error adding review" });
+  }
+});
+
+...
+app.use("/api", projectApp);
+
+exports.projectAPI = functions
+  .region("asia-northeast3")
+  .runWith({
+    memory: "2GB",
+    timeoutSeconds: 120,
+  })
+  .https.onRequest(app);
+```

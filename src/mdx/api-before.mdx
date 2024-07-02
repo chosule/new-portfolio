@@ -1,0 +1,41 @@
+```js
+export default class WinterFoodClient {
+  httpClient: AxiosInstance;
+
+  constructor() {
+    //기본설정
+    this.httpClient = axios.create({
+      baseURL: process.env.NEXT_PUBLIC_BASE_API_URL,
+      headers: {
+        "Content-Type": "application/json",
+        withCredentials: "true",
+      },
+    });
+    // Add request interceptor
+    this.httpClient.interceptors.request.use((config) => {
+      const accessToken = localStorage.getItem("accessToken");
+      if (accessToken) {
+        config.headers.Authorization = `Bearer ${accessToken}`;
+      } else {
+        localStorage.removeItem("accessToken");
+      }
+      return config;
+    });
+  }
+
+  // 로그인
+  async login(form: TLoginRequest) {
+    return this.httpClient
+      .post(`/api/auth/login`, form)
+      .then((res) => res.data.data as TLoginResponse);
+  }
+
+  // 회원가입
+  async signUp(form: TSignUpRequest) {
+    return this.httpClient
+      .post(`/api/auth/register`, form)
+      .then((res) => res.data as TSignUpResponse);
+  }
+    ...
+}
+```

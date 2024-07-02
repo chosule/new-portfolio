@@ -1,0 +1,31 @@
+```js
+const HeaderLayout = ({
+  headerTitle,
+  storeRating,
+  heart,
+  storeName,
+}: Props) => {
+  const router = useRouter();
+  const { data } = useSession();
+  const { data: getLikes } = getLike();
+
+  const { trigger: likeTrigger } = like();
+  const { trigger: unLikeTrigger } = unLike();
+
+  const liked = !!getLikes?.data?.find((item) => item.storeName === storeName);
+
+  const onLike: MouseEventHandler<HTMLButtonElement> = async (e) => {
+    e.preventDefault();
+    if (liked) {
+      await unLikeTrigger({ userId: data?.user?.id, storeName });
+    } else {
+      await likeTrigger({ userId: data?.user?.id, storeName });
+    }
+    mutate([`${process.env.NEXT_PUBLIC_BASE_URL}/like`, data?.user?.id]);
+  };
+    ...
+};
+
+export default HeaderLayout;
+
+```
