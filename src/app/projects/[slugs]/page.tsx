@@ -12,7 +12,7 @@ export default async function ProjectPage({ params }: Props) {
   const slugs = params.slugs;
   const slugsFilterData = await getSlugsProjects(slugs);
   const { banner, title, logo } = slugsFilterData;
-
+  console.log("slugfilterData", slugsFilterData);
   return (
     <div>
       <Image
@@ -27,7 +27,6 @@ export default async function ProjectPage({ params }: Props) {
           <Image src={`/img/${logo}`} alt={logo} width={40} height={40} />
         </div>
         <h1 className="text-3xl font-bold">{title}</h1>
-        <ProjectIntro slugData={slugsFilterData} />
       </div>
     </div>
   );

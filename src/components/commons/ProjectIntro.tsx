@@ -13,8 +13,11 @@ export default function ProjectIntro({ intro }: Intro) {
                 <p className="text-md">{item.text}</p>
               ) : (
                 <div className="flex gap-2 flex-wrap">
-                  {item.skills?.split(",").map((skill) => (
-                    <p className="bg-[#f1f0f0] w-fit py-[2px] px-1 rounded-md text-sm">
+                  {item.skills?.split(",").map((skill, i) => (
+                    <p
+                      key={`skill${i}`}
+                      className="bg-[#f1f0f0] w-fit py-[2px] px-1 rounded-md text-sm"
+                    >
                       {skill}
                     </p>
                   ))}

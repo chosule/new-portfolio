@@ -32,7 +32,7 @@ export default function Introduce() {
 
   useEffect(() => {
     reward();
-  }, []);
+  }, [reward]);
 
   return (
     <div className="flex flex-col gap-8 relative h-screen">

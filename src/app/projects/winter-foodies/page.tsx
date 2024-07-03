@@ -368,8 +368,8 @@ export default function page() {
               <IndentText className="dots-list-white">
                 배경 :&nbsp;
                 <span className="code-strong">
-                  curl -w "@curl-format.txt" -o /dev/null -s
-                  "http://localhost:3000/api"
+                  curl -w &quot;@curl-format.txt&quot; -o /dev/null -s
+                  &quot;http://localhost:3000/api&quot;
                 </span>{" "}
                 명령어를 사용하여 서버 응답 시간의 각 단계를 측정한 결과 서버
                 응답 시작 시간(time_starttransfer)이 상대적으로 길게
