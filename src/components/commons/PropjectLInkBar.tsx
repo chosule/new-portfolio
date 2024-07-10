@@ -17,7 +17,7 @@ export default function PropjectsNavBar({ projectData }: Props) {
       <li className="flex text-sm items-center gap-4">
         <Link
           className="cursor-pointer flex gap-2"
-          href="https://portfolio-new-kimchosules-projects.vercel.app/"
+          href="https://chosule-portfolio-new.vercel.app/"
         >
           <Image src={projectIcon} alt="사람아이콘" width={20} height={20} />
           <p>김초슬 ㅣ portfolio / </p>

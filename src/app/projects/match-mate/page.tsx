@@ -33,8 +33,7 @@ const tocMenu = [
   { number: "content3", title: "서비스 내용" },
   { number: "content4", title: "담당 기능" },
   { number: "content5", title: "성장 경험" },
-  { number: "content6", title: "서비스 화면" },
-  { number: "content7", title: "개선" },
+  { number: "content6", title: "개선" },
 ];
 export default function page() {
   return (
@@ -244,8 +243,8 @@ export default function page() {
             </IndentText>
           </li>
         </ul>
-        <SubTitle id="heading6">서비스 화면</SubTitle>
-        <ul id="content6" className="border-[#eeeeee] pb-[40px] border-b"></ul>
+        {/* <SubTitle id="heading6">서비스 화면</SubTitle>
+        <ul id="content6" className="border-[#eeeeee] pb-[40px] border-b"></ul> */}
         <SubTitle id="heading7">트러블 슈팅</SubTitle>
         <ul className="border-[#eeeeee] pb-[40px] border-b">
           <li>
@@ -278,8 +277,8 @@ export default function page() {
             </IndentText>
           </li>
         </ul>
-        <SubTitle id="heading7">개선</SubTitle>
-        <ul id="content7">
+        <SubTitle id="heading6">개선</SubTitle>
+        <ul id="content6">
           <li>
             <NumberIndentText className="strong">
               1. 폰트 최적화
@@ -295,7 +294,7 @@ export default function page() {
             </IndentText>
             <IndentText className="dots-list-white">
               결과 : 폰트 파일크기 약 30% 절감 (1,103.4KiB, 1,097.7KiB,
-              1,091.3KiB 에서 각각 772.0KiB, 758.8KiB, 731.1KiB 로 감소)
+              1,091.3KiB 에서 각각 232.0KiB, 249.8KiB, 210.1KiB 로 감소)
             </IndentText>
           </li>
           <li>

@@ -388,10 +388,10 @@ export default function page() {
               </IndentText>
             </li>
           </ul>
-          <NumberIndentText strong>2. 코드 스플리팅</NumberIndentText>
+          {/* <NumberIndentText strong>2. 코드 스플리팅</NumberIndentText>
           <NumberIndentText strong>
             3. 도커 이미지 파일 크기 최적화
-          </NumberIndentText>
+          </NumberIndentText> */}
         </ul>
         {/* <SubTitle id="heding5">트러블슈팅</SubTitle>
         <div className="content" id="content5">
