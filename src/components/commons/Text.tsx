@@ -24,5 +24,5 @@ export function Title({ children }: React.ComponentProps<"h1">) {
 }
 
 export function SubTitle({ children }: React.ComponentProps<"h3">) {
-  return <h3 className="text-2xl font-bold mt-7 mb-3">{children}</h3>;
+  return <h3 className="text-[26px] font-bold mt-7 mb-3">{children}</h3>;
 }

@@ -144,6 +144,7 @@
     flex-direction: column;
     gap: 14px;
     z-index: 9999;
+    background-color: #f9f9f5;
   }
   .active {
     color: #d9730d;
@@ -166,6 +167,7 @@
   @media (max-width: 1600px) {
     .navigation {
       left: 18px;
+      display: none;
     }
   }
 }

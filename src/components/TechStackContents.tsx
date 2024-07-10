@@ -113,6 +113,12 @@ const InfraContent = () => {
       </li>
       <li>
         <IndentText>
+          AWS S3와 CloudeFront를 통해 정적 파일을 배포하고 CDN을 구성한 경험이
+          있습니다.
+        </IndentText>
+      </li>
+      <li>
+        <IndentText>
           AWS ECR을 사용하여 Docker 컨테이너 이미지를 저장, 관리 및 배포한
           경험이 있습니다.
         </IndentText>

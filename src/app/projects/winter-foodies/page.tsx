@@ -31,7 +31,7 @@ const intro = [
   {
     title: "적용기술 (마이그레이션 후)",
     skills:
-      "React, Typescript, Nextjs 14 App Router, Zustand ,TailwindCss, Express.js , Node.js , Firebase , Google Cloud Storage , REST API",
+      "React, Typescript, Nextjs 14 App Router, Zustand ,TailwindCss, SWR , Express.js , Node.js , Firebase , Google Cloud Storage , REST API",
   },
   { title: "팀 구성", text: "FE 1명 BE 1명 -> FE 1명" },
   { title: "기여도", text: "100%" },
@@ -190,7 +190,7 @@ export default function page() {
             <IndentText className="dots-list-white">
               Auth.js 를 이용하여 CredentialsProvider 로그인 처리
             </IndentText>
-            <IndentText className="font-medium dots-list-white">
+            <IndentText className="font-semibold dots-list-white">
               <span>
                 기존 코드에서 메모리 누수가 발견되었으며, 이러한 원인은
               </span>
@@ -199,13 +199,13 @@ export default function page() {
                 사용하면서 컴포넌트가 언마운트될 때 비동기 요청이 중단되지 않은
                 등의 요인으로
               </span>
-              <span className="text-underline">
+              <span>
                 &nbsp;불필요한 메모리 사용률이 증가된 것으로 파악하였습니다.
               </span>
               <span>
                 &nbsp;이러한 이유로, 더 간단한 SWR 라이브러리로 변경하여
               </span>
-              <span className="text-underline">
+              <span>
                 &nbsp;데이터 페칭 시 코드의 복잡성을 줄이고 메모리 누수 발생
                 요인을 감소시켰습니다.
               </span>
@@ -231,7 +231,7 @@ export default function page() {
               마이그레이션
             </IndentText>
             <IndentText className="dots-list-white">
-              <span className="font-medium text-underline">
+              <span className="font-semibold">
                 Express.js를 사용하여 Node.js 기반의 REST API를 구축.&nbsp;
               </span>
               API 엔드포인트를 설정하고 CORS및 Cookie Parser를 포함한 다양한
@@ -261,7 +261,7 @@ export default function page() {
           </li>
         </ul>
         <NumberIndentText className="strong">4. 전역상태관리</NumberIndentText>
-        <ul className="dots-list grid grid-cols-2">
+        <ul className="dots-list flex flex-col gap-3">
           <li>
             <IndentText>
               기존 전역상태관리 : <span className="font-medium">Recoil</span>
@@ -269,21 +269,15 @@ export default function page() {
             <ToggleBox className="ml-[32px]">
               <DynamicMDXLoader mdxPath="recoil_code.mdx" />
             </ToggleBox>
-            <IndentText>1. 복잡한 상태 관리</IndentText>
             <IndentText className="dots-list-white ml-[35px]">
-              Recoil을 사용하여 상태 관리 하였을때 각 atom과 selector의 상태를
-              정의하고 사용하는데 많은 보일러 플레이트 코드가 필요하였습니다.
+              atom과 selector의 상태를 정의하고 사용하는데 많은 보일러 플레이트
+              코드가 필요하였습니다. 또한 상태가 복잡해 지면서 각 atom의
+              의존성을 관리하는것이 어려워졌습니다.
             </IndentText>
-            <IndentText className="dots-list-white ml-[35px]">
-              상태가 복잡해지면서 각 atom의 의존성을 관리하는 것이
-              어려워졌습니다.
-            </IndentText>
-            <IndentText>2. 비동기 상태 관리의 어려움</IndentText>
             <IndentText className="dots-list-white ml-[35px]">
               Recoil에서 비동기 상태를 관리하려면 selector를 통해 비동기 로직을
-              구현해야하는데 이부분에 어려움이 있었고 과정이 복잡하였습니다.
+              구현해야하는데 이에 대한 어려움이 있었고 과정이 복잡하였습니다.
             </IndentText>
-            <IndentText>3. 상태 일관성 문제</IndentText>
             <IndentText className="dots-list-white ml-[35px]">
               여러 컴포넌트에서 같은 atom을 사용하였을때 상태의 일관성을
               유지하는것이 어려워 예상치 못한 동작이 발생해 추적이 어려웠습니다.
@@ -297,21 +291,16 @@ export default function page() {
             <ToggleBox className="ml-[32px]">
               <DynamicMDXLoader mdxPath="zustand_code.mdx" />
             </ToggleBox>
-            <h3 className="ml-[21px] font-medium">
-              Zustand로 마이그레이션 이점
-            </h3>
-            <IndentText>1. 단순성</IndentText>
             <IndentText className="dots-list-white ml-[35px]">
               Zustand는 설정과 사용이 매우 간단하여 보일러플레이트 코드가 크게
               감소하였습니다.
             </IndentText>
-            <IndentText>2. 유연성 및 확장성</IndentText>
             <IndentText className="dots-list-white ml-[35px]">
               미들웨어를 통해 상태를 로컬 스토리지에 저장하여 영속화 하였습니다.
             </IndentText>
             <IndentText className="dots-list-white ml-[35px]">
-              Zustand는 비동기 로직을 더 간단하게 처리할 수 있고 상태업데이트가
-              직관적입니다.
+              Zustand는 비동기 로직을 더 간단하게 처리할 수 있고 상태 업데이트가
+              직관적 입니다.
             </IndentText>
           </li>
         </ul>
@@ -323,11 +312,8 @@ export default function page() {
           <li>
             <div className="flex gap-1">
               <IndentText>Docker를 사용한 컨테이너화 및 배포</IndentText>
-              <LinkLine
-                className="pl-0"
-                link="https://github.com/chosule/winter_foodies/blob/main/Dockerfile"
-              >
-                코드
+              <LinkLine link="https://github.com/chosule/winter_foodies/blob/main/Dockerfile">
+                <IoLogoGithub />
               </LinkLine>
             </div>{" "}
             <IndentText className="dots-list-white">
@@ -336,17 +322,20 @@ export default function page() {
             <IndentText className="dots-list-white">
               AWS ECR 클러스터를 생성하여 배포하였습니다.
             </IndentText>
+            <IndentText className="dots-list-white">
+              Docker 컨네이너는 어떠한 환경에서 상관없이 모든 개발환경,
+              테스트환경, 프로덕션 환경에서 동일하게 작동 하여 환경간의 일관성을
+              보장합니다. 또한 컨테이너 오케스트레이션 도구와 함께 이용하므로써
+              애플리케이션의 확장성을 용이하게 관리할수 있다는 이점이 있습니다.
+            </IndentText>
           </li>
         </ul>
         <ul className="dots-list">
           <li>
             <div className="flex gap-1">
               <IndentText>Jenkins를 이용한 자동 배포 설정</IndentText>
-              <LinkLine
-                className="pl-0"
-                link="https://github.com/chosule/winter_foodies/blob/main/Jenkinsfile"
-              >
-                코드
+              <LinkLine link="https://github.com/chosule/winter_foodies/blob/main/Jenkinsfile">
+                <IoLogoGithub />
               </LinkLine>
             </div>
             <IndentText>
@@ -449,7 +438,7 @@ export default function page() {
             </li>
           </ul>
           <NumberIndentText className="strong-2">
-            2. 디버그 모드에서 ab 아파치 웹서버 성능 검사 도구 결과
+            2. 디버그 모드에서 ab 아파치 웹서버 성능 검사 결과
           </NumberIndentText>
           <IndentText>공통 사항 : 50개의 요청을 총 10,000회 테스트</IndentText>
           <ul className="dots-list flex justify-between items-center">

@@ -27,7 +27,7 @@ export default function ToggleBox({ children, className }: Props) {
         </div>
         <button
           onClick={toggleBox}
-          className="hover:text-orange-600 focus:outline-none text-sm"
+          className="hover:text-orange-600 focus:outline-none text-sm text-[#858585] underline"
         >
           일부 코드 보기
         </button>

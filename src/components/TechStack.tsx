@@ -22,7 +22,9 @@ const SKILLS = [
   { id: 10, skills: "Docker" },
   { id: 11, skills: "Jenkins" },
   { id: 12, skills: "AWS" },
+  { id: 13, skills: "Figma" },
 ];
+
 const TABMENU = [
   { name: "Overall.", content: <OverallContent /> },
   { name: "HTML/CSS.", content: <HTMLCssContent /> },
