@@ -38,13 +38,13 @@ const intro = [
 ];
 
 const tocMenu = [
-  { number: "content1", title: "프로젝트 개요" },
-  { number: "content2", title: "리팩토링 및 마이그레이션 목표" },
-  { number: "content3", title: "주요 작업 변경사항" },
-  { number: "content4", title: "마이그레이션 도중 개선사항" },
+  // { number: "content1", title: "프로젝트 개요" },
+  { number: "content1", title: "리팩토링 및 마이그레이션 목표" },
+  { number: "content2", title: "주요 작업 변경사항" },
+  { number: "content3", title: "마이그레이션 도중 개선사항" },
   // { number: "content5", title: "트러블슈팅" },
-  { number: "content6", title: "마이그레이션 결과" },
-  { number: "content7", title: "서비스 화면" },
+  { number: "content4", title: "마이그레이션 결과" },
+  { number: "content5", title: "서비스 화면" },
 ];
 export default function page() {
   return (
@@ -63,19 +63,19 @@ export default function page() {
           <Title>윈터푸디스 프로젝트 - 마이그레이션</Title>
         </div>
         <ProjectIntro intro={intro} />
-        <div className="mt-[30px]">
+        {/* <div className="mt-[30px]">
           <SubTitle id="heading1">프로젝트 개요</SubTitle>
           <div className="content" id="content1">
             <Callout>
               {`WinterFoodies 프로젝트는 처음으로 React를 이용해 CRUD 기능을 학습해보는 목적으로 시작된 프로젝트였습니다. \n 당시 작성한 코드에는 불필요한 부분이 많았고 백엔드 개발과의 협업도 중간에 멈춘 상태였습니다. \n Nextjs 13 Page router에서 Nextjs 14 App router로 마이그레이션함으로써 코드의 최적화 및 백엔드 API구성 , CI/CD 자동배포를 구성함으로써 프로젝트의 완성도를 높이고자 마이그레이션 하였습니다.`}
             </Callout>
           </div>
-        </div>
+        </div> */}
         <ul className="mt-[40px]">
           <li>
-            <SubTitle id="heading2">리팩토링 및 마이그레이션 목표</SubTitle>
+            <SubTitle id="heading1">리팩토링 및 마이그레이션 목표</SubTitle>
           </li>
-          <li className="content" id="content2">
+          <li className="content" id="content1">
             <NumberIndentText>
               1. Next.js 14 App Router로 마이그레이션
             </NumberIndentText>
@@ -108,12 +108,12 @@ export default function page() {
             </IndentText>
           </li>
         </ul>
-        <SubTitle id="heading3">주요 작업 및 변경사항</SubTitle>
+        <SubTitle id="heading2">주요 작업 및 변경사항</SubTitle>
         <NumberIndentText strong>
           1. Next.js 13 Page Router → Next.js 14 App Router 마이그레이션
         </NumberIndentText>
         <ul className="dots-list">
-          <li className="content" id="content3">
+          <li className="content" id="content2">
             <IndentText>변경 이유</IndentText>
             <IndentText>
               {`Next.js 14 App Router로의 마이그레이션은 성능 최적화, SEO,데이터 패칭,향상된 라우팅 등 더 나은 트리쉐이킹과 코드스플리팅을 통해 웹 사이트가 더 빠르게 로드되어 사용자 경험을 향상 시킬수 있습니다.`}
@@ -346,8 +346,8 @@ export default function page() {
           </li>
         </ul>
         <ul>
-          <SubTitle id="heading4">마이그레이션 도중 개선사항</SubTitle>
-          <div className="content" id="content4">
+          <SubTitle id="heading3">마이그레이션 도중 개선사항</SubTitle>
+          <div className="content" id="content3">
             <NumberIndentText strong>
               1. 백엔드 메모리 및 타임아웃 설정
             </NumberIndentText>
@@ -409,8 +409,8 @@ export default function page() {
           </li>
         </ul> */}
         <div>
-          <SubTitle id="heading6">마이그레이션 결과</SubTitle>
-          <div className="content" id="content6">
+          <SubTitle id="heading4">마이그레이션 결과</SubTitle>
+          <div className="content" id="content4">
             <NumberIndentText className="strong-2">
               1. 상태관리 최적화
             </NumberIndentText>
@@ -574,8 +574,17 @@ export default function page() {
           </ul>
         </div>
         <div>
-          <SubTitle id="heading7">서비스 화면</SubTitle>
-          <div className="content" id="content7"></div>
+          <SubTitle id="heading5">서비스 화면</SubTitle>
+          <div className="content" id="content5">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/hWdexneGshU"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
         </div>
       </div>
     </div>

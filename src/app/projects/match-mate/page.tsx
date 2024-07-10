@@ -343,8 +343,7 @@ export default function page() {
             <IndentText className="dots-list-white">
               결과 : 로그아웃 페이지 &nbsp;
               <span className="font-semibold">101KB → 88.8KB</span> / 마이페이지{" "}
-              <span className="font-semibold">150KB → 112KB </span> JavaScript
-              파일 크기 감소
+              <span className="font-semibold">150KB → 112KB </span>
             </IndentText>
           </li>
           <li>

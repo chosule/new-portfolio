@@ -10,21 +10,15 @@ type Props = {
   projectData: Contents[];
 };
 export default function PropjectsNavBar({ projectData }: Props) {
-  const router = useRouter();
-
   const path = usePathname();
   const pathName = path.split("/")[2];
-  const onClickBack = () => {
-    router.back();
-  };
-
   return (
     <ul className="flex h-[52px] justify-between px-4">
       <li className="flex text-sm items-center gap-4">
-        <div className="cursor-pointer flex gap-2 " onClick={onClickBack}>
+        <Link className="cursor-pointer flex gap-2" href="">
           <Image src={projectIcon} alt="사람아이콘" width={20} height={20} />
           <p>김초슬 ㅣ portfolio / </p>
-        </div>
+        </Link>
         <div className="flex gap-2">
           <Image src={fileIcon} alt="사람아이콘" width={20} height={20} />
           <p>{pathName}</p>

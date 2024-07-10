@@ -2,24 +2,7 @@ import Link from "next/link";
 import Title from "./commons/Title";
 import IndentText from "./commons/Text";
 import LinkLine from "./commons/LinkLine";
-const workContents = [
-  {
-    subTitle: "Description.",
-    contents: [
-      { id: 1, contentsList: "웹 사이트 제작 및 유지보수" },
-      { id: 2, contentsList: "Fe Project 참여" },
-    ],
-  },
-  {
-    subTitle: "what did i do.",
-    contents: [
-      { id: 1, contentsList: "Figma 를 통한 웹사이트 제작 및 유지 보수" },
-      { id: 2, contentsList: "javascript , jQuery 애니메이션 구현" },
-      { id: 3, contentsList: "css 전역변수 지정하여 공통 스타일 관리" },
-      { id: 4, contentsList: "react-hook-form, zod를 이용한 form 제작" },
-    ],
-  },
-];
+
 export default function WorkExperience() {
   return (
     <div>
