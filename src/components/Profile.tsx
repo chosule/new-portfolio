@@ -15,9 +15,9 @@ const INFO = [
 ];
 
 const LINK = [
-  { id: 1, linkTitle: "Github" },
-  { id: 2, linkTitle: "Blog" },
-  { id: 3, linkTitle: "Velog" },
+  { id: 1, linkTitle: "Github", link: "https://github.com/chosule" },
+  { id: 2, linkTitle: "Blog", link: "https://chosule-blog.vercel.app/" },
+  { id: 3, linkTitle: "Velog", link: "https://velog.io/@chosule/posts" },
 ];
 export default function Profile() {
   return (
@@ -40,7 +40,11 @@ export default function Profile() {
                 key={links.id}
                 className="transition-transform hover:-translate-y-1"
               >
-                <Link href="#" className="text-4xl font-bold underline">
+                <Link
+                  href={links.link}
+                  target="_black"
+                  className="text-4xl font-bold underline"
+                >
                   {links.linkTitle}
                 </Link>
               </li>
